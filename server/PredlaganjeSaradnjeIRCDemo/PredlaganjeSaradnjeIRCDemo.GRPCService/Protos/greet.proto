@@ -1,0 +1,192 @@
+syntax = "proto3";
+
+option csharp_namespace = "PredlaganjeSaradnjeIRCDemo.GRPCService";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc SayHelloMoreTime (HelloRequest) returns (HelloReplies);
+
+}
+
+service Authenticate{
+   rpc LogIn(UserRequest) returns (UserResponse);
+   rpc Register(UserCreateRequest) returns (UserResponse);
+}
+
+service Company {
+  // Sends a greeting
+  rpc GetCompanies (EmptyRequest) returns (CompaniesResponse);
+  rpc GetCities (EmptyRequest) returns (CitiesResponse);
+  rpc GetEmployees (EmptyRequest) returns (EmployeesResponse);
+  rpc GetLocations (EmptyRequest) returns (LocationsResponse);
+  rpc GetContact (EmptyRequest) returns (ContactsResponse);
+  rpc AddCompany (CompanyRequest) returns (UpsertCompanyResponse);
+  rpc AddContact (ContactRequest) returns (UpsertContactResponse);
+  rpc AddLocation (LocationRequest) returns (UpsertLocationResponse);
+  rpc DeleteCompany (SearchCompanyRequest) returns (UpsertCompanyResponse);
+  rpc UpdateCompany (CompanyRequest) returns (UpsertCompanyResponse);
+}
+
+message SearchCompanyRequest{
+    int32 companyId=1;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message HelloReplies{
+	repeated HelloReply replies = 1;
+}
+
+// The request message containing the user's name.
+message EmptyRequest {
+
+}
+
+message UserRequest{
+    string username=1;
+    string password=2;
+}
+
+message UserCreateRequest{
+    string username=1;
+    string password=2;
+    string firstName=3;
+    string lastName=4;
+}
+
+message UserResponse{
+    string token = 1;
+    StatusCode status=2;
+}
+
+// The response message containing the greetings.
+message CompanyResponse {
+  int32 id = 1;
+  string name = 2;
+  string username = 3;
+  string password = 4;
+}
+message CityResponse {
+  int32 id = 1;
+  string name = 2;
+  string postalcode = 3;
+}
+
+message EmployeeResponse {
+  int32 id = 1;
+  string FirstName = 2;
+  string LastName = 3;
+  string PersonalNumber = 4;
+  int32 Experience = 5;
+}
+message LocationResponse {
+  int32 id = 1;
+  CityResponse City = 2;
+  string streetName = 3;
+  int32 number = 4;
+  int32 storey = 5;
+  int32 door = 6;
+  int32 companyId=7;
+}
+
+message ContactResponse{
+ int32 id = 1;
+ string Content=2;
+ ContactType contactType=3;
+ int32 companyId=4;
+}
+
+message CompanyRequest{
+  string name = 1;
+  string username = 2;
+  string password = 3;
+  LocationRequest location = 4;
+  int32 companyId=5;
+}
+
+message LocationRequest{
+  string streetName = 1;
+  int32 number = 2;
+  int32 storey = 3;
+  int32 door = 4;
+  int32 cityId=5;
+  int32 companyId=6;
+}
+
+message ContactRequest{
+     string Content=1;
+     ContactType contactType=2;
+     int32 companyId=3;
+}
+
+
+
+enum ContactType{
+   NONE = 0;
+	 Email=1;
+    Phone=2;
+    MobilePhone=3;
+    Fax=4;
+    LinkedIn=5;
+    Instagram=6;
+    Facebook=7;
+    Twitter=8;
+}
+
+enum StatusCode{
+    OK=0;
+    Error=1;
+}
+message UpsertCompanyResponse{
+    StatusCode status=1;
+    string message=2;
+    CompanyResponse company=3;
+}
+
+message UpsertContactResponse{
+    StatusCode status=1;
+    string message=2;
+    ContactResponse contact=3;
+}
+
+message UpsertLocationResponse{
+    StatusCode status=1;
+    string message=2;
+    LocationResponse location=3;
+}
+
+
+// The response message containing the greetings.
+
+message CompaniesResponse{
+	repeated CompanyResponse companies = 1;
+}
+
+message CitiesResponse{
+	repeated CityResponse cities = 1;
+}
+
+message EmployeesResponse{
+	repeated EmployeeResponse employees = 1;
+}
+
+message LocationsResponse{
+	repeated LocationResponse locations = 1;
+}
+
+message ContactsResponse{
+    repeated ContactResponse contacts=1;
+}
+

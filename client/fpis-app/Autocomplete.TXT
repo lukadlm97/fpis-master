@@ -1,0 +1,26 @@
+<Autocomplete
+                    id="country-select-demo"
+                    options={props.cities as City[]}
+                    styles={{width:300}}
+                    classes={{
+                        option: classes.option,
+                      }}
+                    autoHighlight
+                    getOptionLabel = {(option)=>option.name}
+                    renderOption={(option)=>(
+                        <React.Fragment>
+                            <span>{option.name}</span>
+                        </React.Fragment>
+                    )}
+                    renderInput={(params)=>(
+                        <TextField 
+                        {...params}
+                        label="Izaberite grad"
+                        variant='outlined'
+                        inputProps={{
+                            ...params.inputProps,
+                            autoComplete:'new-password',
+                        }}
+                        />
+                    )}
+                />
