@@ -9,9 +9,7 @@ namespace PredlaganjeSaradnjeIRC.Data.Model
     {
         [Required]
         public int Id { get; set; }
-        [Required]
         public string Name { get; set; }
-        [Required]
         public string PostalCode { get; set; }
     }
 }

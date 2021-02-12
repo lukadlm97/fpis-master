@@ -20,6 +20,6 @@ namespace PredlaganjeSaradnjeIRC.Data.Service
 
         // more info about Company
         Location GetLocation(int id);
-        object GetInserted();
+        Company GetInserted();
     }
 }

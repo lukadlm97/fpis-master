@@ -177,7 +177,7 @@ namespace PredlaganjeSaradnjeIRC.Services
             companyForUpdate.Password = updatedCompany.Password;
         }
 
-        public object GetInserted()
+        public Company GetInserted()
         {
             return GetAll().LastOrDefault();
         }

@@ -113,7 +113,8 @@ message CompanyRequest{
   string username = 2;
   string password = 3;
   LocationRequest location = 4;
-  int32 companyId=5;
+  ContactRequest contact=5;
+  int32 companyId=6;
 }
 
 message LocationRequest{
@@ -153,6 +154,8 @@ message UpsertCompanyResponse{
     StatusCode status=1;
     string message=2;
     CompanyResponse company=3;
+    ContactResponse contact=4;
+    LocationResponse location=5;
 }
 
 message UpsertContactResponse{

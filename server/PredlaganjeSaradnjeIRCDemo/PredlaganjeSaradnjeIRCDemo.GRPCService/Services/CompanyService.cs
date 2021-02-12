@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Google.Protobuf.Collections;
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using PredlaganjeSaradnjeIRC.Data.Service;
 using System;
 using System.Collections.Generic;
@@ -29,6 +31,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             _employeeService = employeeService;
         }
 
+        [Authorize(Roles = "Admin")]
         public override async Task<CompaniesResponse> GetCompanies(EmptyRequest request, ServerCallContext context)
         {
             var companies = _companyService.GetAll();
@@ -137,8 +140,11 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             PredlaganjeSaradnjeIRC.Data.Model.Location location = 
                 _mapper.Map<PredlaganjeSaradnjeIRC.Data.Model.Location>(request.Location);
 
+            PredlaganjeSaradnjeIRC.Data.Model.Contact contact =
+                _mapper.Map<PredlaganjeSaradnjeIRC.Data.Model.Contact>(request.Contact);
+
             company.Locations = new List<PredlaganjeSaradnjeIRC.Data.Model.Location> { location };
-            company.Contacts = new List<PredlaganjeSaradnjeIRC.Data.Model.Contact>();
+            company.Contacts = new List<PredlaganjeSaradnjeIRC.Data.Model.Contact> { contact };
 
             if (_companyService.Add(company))
             {
@@ -148,7 +154,9 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                 {
                     Status = StatusCode.Ok,
                     Message = "Kompanija je kreirana",
-                    Company = _mapper.Map<CompanyResponse>(createdCompany)
+                    Company = _mapper.Map<CompanyResponse>(createdCompany),
+                    Contact = _mapper.Map<ContactResponse>(createdCompany.Contacts.LastOrDefault()),
+                    Location = _mapper.Map<LocationResponse>(createdCompany.Locations.LastOrDefault())
                 };
             }
             return new UpsertCompanyResponse
@@ -169,7 +177,13 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                 {
                     Status = StatusCode.Ok,
                     Message = "Kontakt je uspesno dodat",
-                    Contact = _mapper.Map<ContactResponse>(company.Contacts.LastOrDefault())
+                    Contact = new ContactResponse
+                    {
+                        Id = company.Contacts.LastOrDefault().Id,
+                        ContactType = (GRPCService.ContactType)company.Contacts.LastOrDefault().ContactType,
+                        Content = company.Contacts.LastOrDefault().Content,
+                        CompanyId = company.Id,
+                    }
                 };
             }
 
@@ -189,7 +203,21 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                 var company = _companyService.GetById(request.CompanyId);
                 return new UpsertLocationResponse
                 {
-                    Location = _mapper.Map<LocationResponse>(company.Locations.LastOrDefault()),
+                    Location = new LocationResponse
+                    {
+                        Id = company.Locations.LastOrDefault().Id,
+                        City = new CityResponse
+                        {
+                            Id = company.Locations.LastOrDefault().City.Id,
+                            Name = company.Locations.LastOrDefault().City.Name,
+                            Postalcode = company.Locations.LastOrDefault().City.PostalCode
+                        },
+                        Door = company.Locations.LastOrDefault()?.Door??0,
+                        Number  =company.Locations.LastOrDefault().Number,
+                        Storey = company.Locations.LastOrDefault()?.Storey??0,
+                        StreetName = company.Locations.LastOrDefault().StreetName,
+                        CompanyId = company.Id
+                    },
                     Message = "Lokacije je uspesno promenjena",
                     Status = StatusCode.Ok
                 };
@@ -238,7 +266,10 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                 {
                     Status = StatusCode.Ok,
                     Message = "kompanija je uspesno izmenjena",
-                    Company = _mapper.Map<CompanyResponse>(updated)
+                    Company = _mapper.Map<CompanyResponse>(updated),
+                    Contact = _mapper.Map<ContactResponse>(updated.Contacts.LastOrDefault()),
+                    Location = _mapper.Map<LocationResponse>(updated.Locations.LastOrDefault())
+
                 };
             }
             return new UpsertCompanyResponse
