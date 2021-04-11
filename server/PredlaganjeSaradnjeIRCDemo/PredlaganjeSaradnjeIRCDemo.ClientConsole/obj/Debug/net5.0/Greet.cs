@@ -45,59 +45,62 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
             "ASgFEhEKCWNvbXBhbnlJZBgHIAEoBSJvCg9Db250YWN0UmVzcG9uc2USCgoC",
             "aWQYASABKAUSDwoHQ29udGVudBgCIAEoCRIsCgtjb250YWN0VHlwZRgDIAEo",
             "DjIXLmhlbGxvd29ybGQuQ29udGFjdFR5cGUSEQoJY29tcGFueUlkGAQgASgF",
-            "IoQBCg5Db21wYW55UmVxdWVzdBIMCgRuYW1lGAEgASgJEhAKCHVzZXJuYW1l",
+            "IrEBCg5Db21wYW55UmVxdWVzdBIMCgRuYW1lGAEgASgJEhAKCHVzZXJuYW1l",
             "GAIgASgJEhAKCHBhc3N3b3JkGAMgASgJEi0KCGxvY2F0aW9uGAQgASgLMhsu",
-            "aGVsbG93b3JsZC5Mb2NhdGlvblJlcXVlc3QSEQoJY29tcGFueUlkGAUgASgF",
+            "aGVsbG93b3JsZC5Mb2NhdGlvblJlcXVlc3QSKwoHY29udGFjdBgFIAEoCzIa",
+            "LmhlbGxvd29ybGQuQ29udGFjdFJlcXVlc3QSEQoJY29tcGFueUlkGAYgASgF",
             "InYKD0xvY2F0aW9uUmVxdWVzdBISCgpzdHJlZXROYW1lGAEgASgJEg4KBm51",
             "bWJlchgCIAEoBRIOCgZzdG9yZXkYAyABKAUSDAoEZG9vchgEIAEoBRIOCgZj",
             "aXR5SWQYBSABKAUSEQoJY29tcGFueUlkGAYgASgFImIKDkNvbnRhY3RSZXF1",
             "ZXN0Eg8KB0NvbnRlbnQYASABKAkSLAoLY29udGFjdFR5cGUYAiABKA4yFy5o",
-            "ZWxsb3dvcmxkLkNvbnRhY3RUeXBlEhEKCWNvbXBhbnlJZBgDIAEoBSJ+ChVV",
-            "cHNlcnRDb21wYW55UmVzcG9uc2USJgoGc3RhdHVzGAEgASgOMhYuaGVsbG93",
-            "b3JsZC5TdGF0dXNDb2RlEg8KB21lc3NhZ2UYAiABKAkSLAoHY29tcGFueRgD",
-            "IAEoCzIbLmhlbGxvd29ybGQuQ29tcGFueVJlc3BvbnNlIn4KFVVwc2VydENv",
-            "bnRhY3RSZXNwb25zZRImCgZzdGF0dXMYASABKA4yFi5oZWxsb3dvcmxkLlN0",
-            "YXR1c0NvZGUSDwoHbWVzc2FnZRgCIAEoCRIsCgdjb250YWN0GAMgASgLMhsu",
-            "aGVsbG93b3JsZC5Db250YWN0UmVzcG9uc2UigQEKFlVwc2VydExvY2F0aW9u",
-            "UmVzcG9uc2USJgoGc3RhdHVzGAEgASgOMhYuaGVsbG93b3JsZC5TdGF0dXND",
-            "b2RlEg8KB21lc3NhZ2UYAiABKAkSLgoIbG9jYXRpb24YAyABKAsyHC5oZWxs",
-            "b3dvcmxkLkxvY2F0aW9uUmVzcG9uc2UiQwoRQ29tcGFuaWVzUmVzcG9uc2US",
-            "LgoJY29tcGFuaWVzGAEgAygLMhsuaGVsbG93b3JsZC5Db21wYW55UmVzcG9u",
-            "c2UiOgoOQ2l0aWVzUmVzcG9uc2USKAoGY2l0aWVzGAEgAygLMhguaGVsbG93",
-            "b3JsZC5DaXR5UmVzcG9uc2UiRAoRRW1wbG95ZWVzUmVzcG9uc2USLwoJZW1w",
-            "bG95ZWVzGAEgAygLMhwuaGVsbG93b3JsZC5FbXBsb3llZVJlc3BvbnNlIkQK",
-            "EUxvY2F0aW9uc1Jlc3BvbnNlEi8KCWxvY2F0aW9ucxgBIAMoCzIcLmhlbGxv",
-            "d29ybGQuTG9jYXRpb25SZXNwb25zZSJBChBDb250YWN0c1Jlc3BvbnNlEi0K",
-            "CGNvbnRhY3RzGAEgAygLMhsuaGVsbG93b3JsZC5Db250YWN0UmVzcG9uc2Uq",
-            "fwoLQ29udGFjdFR5cGUSCAoETk9ORRAAEgkKBUVtYWlsEAESCQoFUGhvbmUQ",
-            "AhIPCgtNb2JpbGVQaG9uZRADEgcKA0ZheBAEEgwKCExpbmtlZEluEAUSDQoJ",
-            "SW5zdGFncmFtEAYSDAoIRmFjZWJvb2sQBxILCgdUd2l0dGVyEAgqHwoKU3Rh",
-            "dHVzQ29kZRIGCgJPSxAAEgkKBUVycm9yEAEyjwEKB0dyZWV0ZXISPAoIU2F5",
-            "SGVsbG8SGC5oZWxsb3dvcmxkLkhlbGxvUmVxdWVzdBoWLmhlbGxvd29ybGQu",
-            "SGVsbG9SZXBseRJGChBTYXlIZWxsb01vcmVUaW1lEhguaGVsbG93b3JsZC5I",
-            "ZWxsb1JlcXVlc3QaGC5oZWxsb3dvcmxkLkhlbGxvUmVwbGllczKPAQoMQXV0",
-            "aGVudGljYXRlEjoKBUxvZ0luEhcuaGVsbG93b3JsZC5Vc2VyUmVxdWVzdBoY",
-            "LmhlbGxvd29ybGQuVXNlclJlc3BvbnNlEkMKCFJlZ2lzdGVyEh0uaGVsbG93",
-            "b3JsZC5Vc2VyQ3JlYXRlUmVxdWVzdBoYLmhlbGxvd29ybGQuVXNlclJlc3Bv",
-            "bnNlMv0FCgdDb21wYW55EkcKDEdldENvbXBhbmllcxIYLmhlbGxvd29ybGQu",
-            "RW1wdHlSZXF1ZXN0Gh0uaGVsbG93b3JsZC5Db21wYW5pZXNSZXNwb25zZRJB",
-            "CglHZXRDaXRpZXMSGC5oZWxsb3dvcmxkLkVtcHR5UmVxdWVzdBoaLmhlbGxv",
-            "d29ybGQuQ2l0aWVzUmVzcG9uc2USRwoMR2V0RW1wbG95ZWVzEhguaGVsbG93",
-            "b3JsZC5FbXB0eVJlcXVlc3QaHS5oZWxsb3dvcmxkLkVtcGxveWVlc1Jlc3Bv",
-            "bnNlEkcKDEdldExvY2F0aW9ucxIYLmhlbGxvd29ybGQuRW1wdHlSZXF1ZXN0",
-            "Gh0uaGVsbG93b3JsZC5Mb2NhdGlvbnNSZXNwb25zZRJECgpHZXRDb250YWN0",
-            "EhguaGVsbG93b3JsZC5FbXB0eVJlcXVlc3QaHC5oZWxsb3dvcmxkLkNvbnRh",
-            "Y3RzUmVzcG9uc2USSwoKQWRkQ29tcGFueRIaLmhlbGxvd29ybGQuQ29tcGFu",
-            "eVJlcXVlc3QaIS5oZWxsb3dvcmxkLlVwc2VydENvbXBhbnlSZXNwb25zZRJL",
-            "CgpBZGRDb250YWN0EhouaGVsbG93b3JsZC5Db250YWN0UmVxdWVzdBohLmhl",
-            "bGxvd29ybGQuVXBzZXJ0Q29udGFjdFJlc3BvbnNlEk4KC0FkZExvY2F0aW9u",
-            "EhsuaGVsbG93b3JsZC5Mb2NhdGlvblJlcXVlc3QaIi5oZWxsb3dvcmxkLlVw",
-            "c2VydExvY2F0aW9uUmVzcG9uc2USVAoNRGVsZXRlQ29tcGFueRIgLmhlbGxv",
-            "d29ybGQuU2VhcmNoQ29tcGFueVJlcXVlc3QaIS5oZWxsb3dvcmxkLlVwc2Vy",
-            "dENvbXBhbnlSZXNwb25zZRJOCg1VcGRhdGVDb21wYW55EhouaGVsbG93b3Js",
-            "ZC5Db21wYW55UmVxdWVzdBohLmhlbGxvd29ybGQuVXBzZXJ0Q29tcGFueVJl",
-            "c3BvbnNlQimqAiZQcmVkbGFnYW5qZVNhcmFkbmplSVJDRGVtby5HUlBDU2Vy",
-            "dmljZWIGcHJvdG8z"));
+            "ZWxsb3dvcmxkLkNvbnRhY3RUeXBlEhEKCWNvbXBhbnlJZBgDIAEoBSLcAQoV",
+            "VXBzZXJ0Q29tcGFueVJlc3BvbnNlEiYKBnN0YXR1cxgBIAEoDjIWLmhlbGxv",
+            "d29ybGQuU3RhdHVzQ29kZRIPCgdtZXNzYWdlGAIgASgJEiwKB2NvbXBhbnkY",
+            "AyABKAsyGy5oZWxsb3dvcmxkLkNvbXBhbnlSZXNwb25zZRIsCgdjb250YWN0",
+            "GAQgASgLMhsuaGVsbG93b3JsZC5Db250YWN0UmVzcG9uc2USLgoIbG9jYXRp",
+            "b24YBSABKAsyHC5oZWxsb3dvcmxkLkxvY2F0aW9uUmVzcG9uc2UifgoVVXBz",
+            "ZXJ0Q29udGFjdFJlc3BvbnNlEiYKBnN0YXR1cxgBIAEoDjIWLmhlbGxvd29y",
+            "bGQuU3RhdHVzQ29kZRIPCgdtZXNzYWdlGAIgASgJEiwKB2NvbnRhY3QYAyAB",
+            "KAsyGy5oZWxsb3dvcmxkLkNvbnRhY3RSZXNwb25zZSKBAQoWVXBzZXJ0TG9j",
+            "YXRpb25SZXNwb25zZRImCgZzdGF0dXMYASABKA4yFi5oZWxsb3dvcmxkLlN0",
+            "YXR1c0NvZGUSDwoHbWVzc2FnZRgCIAEoCRIuCghsb2NhdGlvbhgDIAEoCzIc",
+            "LmhlbGxvd29ybGQuTG9jYXRpb25SZXNwb25zZSJDChFDb21wYW5pZXNSZXNw",
+            "b25zZRIuCgljb21wYW5pZXMYASADKAsyGy5oZWxsb3dvcmxkLkNvbXBhbnlS",
+            "ZXNwb25zZSI6Cg5DaXRpZXNSZXNwb25zZRIoCgZjaXRpZXMYASADKAsyGC5o",
+            "ZWxsb3dvcmxkLkNpdHlSZXNwb25zZSJEChFFbXBsb3llZXNSZXNwb25zZRIv",
+            "CgllbXBsb3llZXMYASADKAsyHC5oZWxsb3dvcmxkLkVtcGxveWVlUmVzcG9u",
+            "c2UiRAoRTG9jYXRpb25zUmVzcG9uc2USLwoJbG9jYXRpb25zGAEgAygLMhwu",
+            "aGVsbG93b3JsZC5Mb2NhdGlvblJlc3BvbnNlIkEKEENvbnRhY3RzUmVzcG9u",
+            "c2USLQoIY29udGFjdHMYASADKAsyGy5oZWxsb3dvcmxkLkNvbnRhY3RSZXNw",
+            "b25zZSp/CgtDb250YWN0VHlwZRIICgROT05FEAASCQoFRW1haWwQARIJCgVQ",
+            "aG9uZRACEg8KC01vYmlsZVBob25lEAMSBwoDRmF4EAQSDAoITGlua2VkSW4Q",
+            "BRINCglJbnN0YWdyYW0QBhIMCghGYWNlYm9vaxAHEgsKB1R3aXR0ZXIQCCof",
+            "CgpTdGF0dXNDb2RlEgYKAk9LEAASCQoFRXJyb3IQATKPAQoHR3JlZXRlchI8",
+            "CghTYXlIZWxsbxIYLmhlbGxvd29ybGQuSGVsbG9SZXF1ZXN0GhYuaGVsbG93",
+            "b3JsZC5IZWxsb1JlcGx5EkYKEFNheUhlbGxvTW9yZVRpbWUSGC5oZWxsb3dv",
+            "cmxkLkhlbGxvUmVxdWVzdBoYLmhlbGxvd29ybGQuSGVsbG9SZXBsaWVzMo8B",
+            "CgxBdXRoZW50aWNhdGUSOgoFTG9nSW4SFy5oZWxsb3dvcmxkLlVzZXJSZXF1",
+            "ZXN0GhguaGVsbG93b3JsZC5Vc2VyUmVzcG9uc2USQwoIUmVnaXN0ZXISHS5o",
+            "ZWxsb3dvcmxkLlVzZXJDcmVhdGVSZXF1ZXN0GhguaGVsbG93b3JsZC5Vc2Vy",
+            "UmVzcG9uc2Uy/QUKB0NvbXBhbnkSRwoMR2V0Q29tcGFuaWVzEhguaGVsbG93",
+            "b3JsZC5FbXB0eVJlcXVlc3QaHS5oZWxsb3dvcmxkLkNvbXBhbmllc1Jlc3Bv",
+            "bnNlEkEKCUdldENpdGllcxIYLmhlbGxvd29ybGQuRW1wdHlSZXF1ZXN0Ghou",
+            "aGVsbG93b3JsZC5DaXRpZXNSZXNwb25zZRJHCgxHZXRFbXBsb3llZXMSGC5o",
+            "ZWxsb3dvcmxkLkVtcHR5UmVxdWVzdBodLmhlbGxvd29ybGQuRW1wbG95ZWVz",
+            "UmVzcG9uc2USRwoMR2V0TG9jYXRpb25zEhguaGVsbG93b3JsZC5FbXB0eVJl",
+            "cXVlc3QaHS5oZWxsb3dvcmxkLkxvY2F0aW9uc1Jlc3BvbnNlEkQKCkdldENv",
+            "bnRhY3QSGC5oZWxsb3dvcmxkLkVtcHR5UmVxdWVzdBocLmhlbGxvd29ybGQu",
+            "Q29udGFjdHNSZXNwb25zZRJLCgpBZGRDb21wYW55EhouaGVsbG93b3JsZC5D",
+            "b21wYW55UmVxdWVzdBohLmhlbGxvd29ybGQuVXBzZXJ0Q29tcGFueVJlc3Bv",
+            "bnNlEksKCkFkZENvbnRhY3QSGi5oZWxsb3dvcmxkLkNvbnRhY3RSZXF1ZXN0",
+            "GiEuaGVsbG93b3JsZC5VcHNlcnRDb250YWN0UmVzcG9uc2USTgoLQWRkTG9j",
+            "YXRpb24SGy5oZWxsb3dvcmxkLkxvY2F0aW9uUmVxdWVzdBoiLmhlbGxvd29y",
+            "bGQuVXBzZXJ0TG9jYXRpb25SZXNwb25zZRJUCg1EZWxldGVDb21wYW55EiAu",
+            "aGVsbG93b3JsZC5TZWFyY2hDb21wYW55UmVxdWVzdBohLmhlbGxvd29ybGQu",
+            "VXBzZXJ0Q29tcGFueVJlc3BvbnNlEk4KDVVwZGF0ZUNvbXBhbnkSGi5oZWxs",
+            "b3dvcmxkLkNvbXBhbnlSZXF1ZXN0GiEuaGVsbG93b3JsZC5VcHNlcnRDb21w",
+            "YW55UmVzcG9uc2VCKaoCJlByZWRsYWdhbmplU2FyYWRuamVJUkNEZW1vLkdS",
+            "UENTZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactType), typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.StatusCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,10 +117,10 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.EmployeeResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.EmployeeResponse.Parser, new[]{ "Id", "FirstName", "LastName", "PersonalNumber", "Experience" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse.Parser, new[]{ "Id", "City", "StreetName", "Number", "Storey", "Door", "CompanyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse.Parser, new[]{ "Id", "Content", "ContactType", "CompanyId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompanyRequest), global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompanyRequest.Parser, new[]{ "Name", "Username", "Password", "Location", "CompanyId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompanyRequest), global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompanyRequest.Parser, new[]{ "Name", "Username", "Password", "Location", "Contact", "CompanyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationRequest), global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationRequest.Parser, new[]{ "StreetName", "Number", "Storey", "Door", "CityId", "CompanyId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest), global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest.Parser, new[]{ "Content", "ContactType", "CompanyId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertCompanyResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertCompanyResponse.Parser, new[]{ "Status", "Message", "Company" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertCompanyResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertCompanyResponse.Parser, new[]{ "Status", "Message", "Company", "Contact", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertContactResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertContactResponse.Parser, new[]{ "Status", "Message", "Contact" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertLocationResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.UpsertLocationResponse.Parser, new[]{ "Status", "Message", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompaniesResponse), global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompaniesResponse.Parser, new[]{ "Companies" }, null, null, null, null),
@@ -3222,6 +3225,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       username_ = other.username_;
       password_ = other.password_;
       location_ = other.location_ != null ? other.location_.Clone() : null;
+      contact_ = other.contact_ != null ? other.contact_.Clone() : null;
       companyId_ = other.companyId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3275,8 +3279,19 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       }
     }
 
+    /// <summary>Field number for the "contact" field.</summary>
+    public const int ContactFieldNumber = 5;
+    private global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest contact_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest Contact {
+      get { return contact_; }
+      set {
+        contact_ = value;
+      }
+    }
+
     /// <summary>Field number for the "companyId" field.</summary>
-    public const int CompanyIdFieldNumber = 5;
+    public const int CompanyIdFieldNumber = 6;
     private int companyId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CompanyId {
@@ -3303,6 +3318,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       if (Username != other.Username) return false;
       if (Password != other.Password) return false;
       if (!object.Equals(Location, other.Location)) return false;
+      if (!object.Equals(Contact, other.Contact)) return false;
       if (CompanyId != other.CompanyId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3314,6 +3330,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
       if (location_ != null) hash ^= Location.GetHashCode();
+      if (contact_ != null) hash ^= Contact.GetHashCode();
       if (CompanyId != 0) hash ^= CompanyId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3347,8 +3364,12 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
         output.WriteRawTag(34);
         output.WriteMessage(Location);
       }
+      if (contact_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Contact);
+      }
       if (CompanyId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(CompanyId);
       }
       if (_unknownFields != null) {
@@ -3376,8 +3397,12 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
         output.WriteRawTag(34);
         output.WriteMessage(Location);
       }
+      if (contact_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Contact);
+      }
       if (CompanyId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteInt32(CompanyId);
       }
       if (_unknownFields != null) {
@@ -3400,6 +3425,9 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       }
       if (location_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
+      }
+      if (contact_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Contact);
       }
       if (CompanyId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CompanyId);
@@ -3429,6 +3457,12 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
           Location = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationRequest();
         }
         Location.MergeFrom(other.Location);
+      }
+      if (other.contact_ != null) {
+        if (contact_ == null) {
+          Contact = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest();
+        }
+        Contact.MergeFrom(other.Contact);
       }
       if (other.CompanyId != 0) {
         CompanyId = other.CompanyId;
@@ -3466,7 +3500,14 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
             input.ReadMessage(Location);
             break;
           }
-          case 40: {
+          case 42: {
+            if (contact_ == null) {
+              Contact = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest();
+            }
+            input.ReadMessage(Contact);
+            break;
+          }
+          case 48: {
             CompanyId = input.ReadInt32();
             break;
           }
@@ -3503,7 +3544,14 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
             input.ReadMessage(Location);
             break;
           }
-          case 40: {
+          case 42: {
+            if (contact_ == null) {
+              Contact = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactRequest();
+            }
+            input.ReadMessage(Contact);
+            break;
+          }
+          case 48: {
             CompanyId = input.ReadInt32();
             break;
           }
@@ -4142,6 +4190,8 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       status_ = other.status_;
       message_ = other.message_;
       company_ = other.company_ != null ? other.company_.Clone() : null;
+      contact_ = other.contact_ != null ? other.contact_.Clone() : null;
+      location_ = other.location_ != null ? other.location_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4183,6 +4233,28 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       }
     }
 
+    /// <summary>Field number for the "contact" field.</summary>
+    public const int ContactFieldNumber = 4;
+    private global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse contact_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse Contact {
+      get { return contact_; }
+      set {
+        contact_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 5;
+    private global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse location_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse Location {
+      get { return location_; }
+      set {
+        location_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpsertCompanyResponse);
@@ -4199,6 +4271,8 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       if (Status != other.Status) return false;
       if (Message != other.Message) return false;
       if (!object.Equals(Company, other.Company)) return false;
+      if (!object.Equals(Contact, other.Contact)) return false;
+      if (!object.Equals(Location, other.Location)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4208,6 +4282,8 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       if (Status != global::PredlaganjeSaradnjeIRCDemo.GRPCService.StatusCode.Ok) hash ^= Status.GetHashCode();
       if (Message.Length != 0) hash ^= Message.GetHashCode();
       if (company_ != null) hash ^= Company.GetHashCode();
+      if (contact_ != null) hash ^= Contact.GetHashCode();
+      if (location_ != null) hash ^= Location.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4236,6 +4312,14 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
         output.WriteRawTag(26);
         output.WriteMessage(Company);
       }
+      if (contact_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Contact);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Location);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4257,6 +4341,14 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
         output.WriteRawTag(26);
         output.WriteMessage(Company);
       }
+      if (contact_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Contact);
+      }
+      if (location_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Location);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4274,6 +4366,12 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
       }
       if (company_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Company);
+      }
+      if (contact_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Contact);
+      }
+      if (location_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Location);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4297,6 +4395,18 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
           Company = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompanyResponse();
         }
         Company.MergeFrom(other.Company);
+      }
+      if (other.contact_ != null) {
+        if (contact_ == null) {
+          Contact = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse();
+        }
+        Contact.MergeFrom(other.Contact);
+      }
+      if (other.location_ != null) {
+        if (location_ == null) {
+          Location = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse();
+        }
+        Location.MergeFrom(other.Location);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4327,6 +4437,20 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
             input.ReadMessage(Company);
             break;
           }
+          case 34: {
+            if (contact_ == null) {
+              Contact = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse();
+            }
+            input.ReadMessage(Contact);
+            break;
+          }
+          case 42: {
+            if (location_ == null) {
+              Location = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse();
+            }
+            input.ReadMessage(Location);
+            break;
+          }
         }
       }
     #endif
@@ -4354,6 +4478,20 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService {
               Company = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.CompanyResponse();
             }
             input.ReadMessage(Company);
+            break;
+          }
+          case 34: {
+            if (contact_ == null) {
+              Contact = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.ContactResponse();
+            }
+            input.ReadMessage(Contact);
+            break;
+          }
+          case 42: {
+            if (location_ == null) {
+              Location = new global::PredlaganjeSaradnjeIRCDemo.GRPCService.LocationResponse();
+            }
+            input.ReadMessage(Location);
             break;
           }
         }

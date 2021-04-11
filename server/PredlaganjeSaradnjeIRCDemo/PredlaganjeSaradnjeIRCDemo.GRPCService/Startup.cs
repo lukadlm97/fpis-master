@@ -95,6 +95,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService
             services.AddScoped<IEmployee, EmployeeService>();
             services.AddScoped<IUser, UserService>();
             services.AddAutoMapper(typeof(AutoMapperProfile));
+            services.AddLogging();
 
             services.AddDbContext<ApplicationContext>
               (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

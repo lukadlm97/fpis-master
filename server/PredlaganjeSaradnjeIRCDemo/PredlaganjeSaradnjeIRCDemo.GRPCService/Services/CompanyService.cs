@@ -3,6 +3,7 @@ using Google.Protobuf.Collections;
 using Grpc.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 using PredlaganjeSaradnjeIRC.Data.Service;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,10 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
         private readonly ICity _cityService;
         private readonly IMapper _mapper;
         private readonly IEmployee _employeeService;
+        private readonly ILogger<CompanyService> _logger;
 
         public CompanyService(ICompany companyService, IContact contactService, ILocation locationService, 
-                                ICity cityService, IMapper mapper,IEmployee employeeService )
+                                ICity cityService, IMapper mapper,IEmployee employeeService,ILogger<CompanyService> logger)
         {
             _companyService = companyService;
             _contactService = contactService;
@@ -29,6 +31,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             _cityService = cityService;
             _mapper = mapper;
             _employeeService = employeeService;
+            _logger = logger;
         }
 
         [Authorize(Roles = "Admin")]
@@ -37,7 +40,12 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             var companies = _companyService.GetAll();
 
             if (companies == null)
+            {
+                _logger.LogError("companies doesn't found");
                 return null;
+            }
+
+            _logger.LogInformation("companies found");
 
             var convertedCompanies = companies.Select(x => _mapper.Map<CompanyResponse>(x));
 
@@ -52,9 +60,10 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             var employees = _employeeService.GetAll();
             if (employees == null)
             {
+                _logger.LogError("emplyees doesn't found");
                 return null;
             }
-
+            _logger.LogInformation("emplyees found");
             var convertedEmplyees = employees.Select(x => _mapper.Map<EmployeeResponse>(x));
 
             return new EmployeesResponse { 
@@ -68,9 +77,11 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
 
             if (cities == null)
             {
+                _logger.LogError("cities doesn't found");
                 return null;
             }
 
+            _logger.LogInformation("cities found");
             var convertedCities = cities.Select(x => _mapper.Map<CityResponse>(x));
 
             return new CitiesResponse
@@ -84,8 +95,13 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             var companies = _companyService.GetAll();
 
             if (companies == null)
+            {
+                _logger.LogError("contacts doesn't found");
                 return null;
+            }
 
+
+            _logger.LogInformation("contacts found");
 
             List<ContactResponse> contacts = new List<ContactResponse>();
             foreach(var comp in companies)
@@ -111,7 +127,14 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             var companies = _companyService.GetAll();
 
             if (companies == null)
+            {
+
+                _logger.LogError("locations doesn't found");
                 return null;
+            }
+
+
+            _logger.LogInformation("locations found");
 
 
             List<LocationResponse> locations = new List<LocationResponse>();
@@ -150,6 +173,8 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             {
                 var createdCompany =  _companyService.GetInserted();
 
+                _logger.LogInformation("company created");
+
                 return new UpsertCompanyResponse
                 {
                     Status = StatusCode.Ok,
@@ -159,9 +184,12 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                     Location = _mapper.Map<LocationResponse>(createdCompany.Locations.LastOrDefault())
                 };
             }
+
+            _logger.LogError("company can't be created");
             return new UpsertCompanyResponse
             {
-                Status = StatusCode.Error,
+
+            Status = StatusCode.Error,
                 Message = "Nije moguce kreirati kompaniju"
             };
         }
@@ -173,6 +201,7 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             if (_companyService.AddNewContact(request.CompanyId, contact))
             {
                 var company = _companyService.GetById(request.CompanyId);
+                _logger.LogInformation("contact created");
                 return new UpsertContactResponse
                 {
                     Status = StatusCode.Ok,
@@ -186,6 +215,9 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                     }
                 };
             }
+
+
+            _logger.LogError("contact can't be created");
 
             return new UpsertContactResponse
             {
@@ -201,6 +233,9 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
             if (_locationService.Add(request.CompanyId, location))
             {
                 var company = _companyService.GetById(request.CompanyId);
+
+                _logger.LogInformation("location created");
+
                 return new UpsertLocationResponse
                 {
                     Location = new LocationResponse
@@ -223,6 +258,9 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                 };
             }
 
+
+            _logger.LogError("location can't be created");
+
             return new UpsertLocationResponse
             {
                 Message = "Lokacije nije uspesno promenjena",
@@ -234,12 +272,14 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
         {
             if (_companyService.Delete(request.CompanyId))
             {
+                _logger.LogInformation("company deleted");
                 return new UpsertCompanyResponse
                 {
                     Status = StatusCode.Ok,
                     Message = "kompanija je uspesno obrisana"
                 };
             }
+            _logger.LogError("company can't be deleted");
             return new UpsertCompanyResponse
             {
                 Status = StatusCode.Error,
@@ -256,12 +296,15 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
                 var updated = _companyService.GetById(request.CompanyId);
                 if (updated == null)
                 {
+                    _logger.LogError("company can't be updated");
                     return new UpsertCompanyResponse
                     {
                         Message = "Nije moguce izmeniti kompaniju",
                         Status = StatusCode.Error
                     };
                 }
+
+                _logger.LogInformation("company updated");
                 return new UpsertCompanyResponse
                 {
                     Status = StatusCode.Ok,
@@ -272,6 +315,10 @@ namespace PredlaganjeSaradnjeIRCDemo.GRPCService.Services
 
                 };
             }
+
+
+            _logger.LogError("company can't be updated");
+
             return new UpsertCompanyResponse
             {
                 Message = "Nije moguce izmeniti kompaniju",

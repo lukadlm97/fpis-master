@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4/p5Xrta4hRn+TWJmfsqq7R3Nt6kmazzyoGObl9XJLPeKtWV42D4snEWUkfG9d6931t5KlXdDD9z3BGp5b6YZg==",
+  "dgSpecHash": "WcimOHf1cv4REwSbr2S4awHFYIoznndEQGDkc4uves/DTEkl4mV9yzQ7vRsq+QnCH74+Ex1J6bC5GPZTEQruvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\luka.radovanovic\\source\\repos\\fpis-project\\server\\PredlaganjeSaradnjeIRCDemo\\PredlaganjeSaradnjeIRCDemo.GRPCService\\PredlaganjeSaradnjeIRCDemo.GRPCService.csproj",
   "expectedPackageFiles": [
